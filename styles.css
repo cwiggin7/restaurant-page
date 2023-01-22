@@ -1,100 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, #content {
+    height: 100%;
 }
 
-img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-size: 16px;
-    color: #3c3950;
-    background: #f5f5f5;
-    line-height: 1.5;
+    background-color: #f5f5f5;
     font-family: 'Jost', sans-serif;
-    font-weight: 300;
 }
 
-#header {
+#main-header {
+    font-family: sans-serif;
     height: 8vh;
-    display: flex;
-    justify-content: right;
+}
+
+#nav {
     align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: right;
     margin-right: 2%;
 }
 
-#header div {
-    text-transform: uppercase;
+.nav-item {
     cursor: pointer;
-    padding: 0px 15px;
-    font-family: sans-serif;
-    font-weight: bold;
     font-size: 14px;
+    font-weight: 700;
+    margin: 1rem;
+    text-transform: uppercase;
     transition: all .2s ease-in-out 0s;
 }
 
-#menu {
-    display: flex;
+.nav-item:hover:not(#menu-home) {
+    color: #e63946;
 }
 
-#home {
-    border: 2px solid #3c3950;
+#menu-home {
+    border: 2px solid #000;
+    padding: .25rem .8rem;
 }
 
-.menu-item:hover {
-    color: #ee382d;
+#page-header {
+    background: #121212;
+    color: #FFF;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-#title-container h2::first-line {
+#page-title {
+    font-size: 100px;
+    font-weight: 200;
+    letter-spacing: .25rem;
+    padding-top: 150px;
+    padding-bottom: 220px;
+}
+
+#page-title::first-line {
     font-weight: 300;
     letter-spacing: 0;
 }
 
-#title-container h2 {
-    color: #fff;
-    background: #121212;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 100px;
-    line-height: 1;
-    padding: 1em 0 2em 0;
-    font-weight: 200;
-    letter-spacing: 6px;
-}
-
-#info-container {
-    background: #f5f5f5;
+#content-section {
     display: flex;
+    margin-top: 3%;
 }
 
-#info-textbox {
-    margin-left: 5%;
-    width: 40%;
-}
-
-#info-textbox div {
+#chef-name {
     font-size: 36px;
-    margin-top: 20%;
-    margin-bottom: 5%;
     font-weight: 200;
+    letter-spacing: 4px;
+    margin-left: 5%;
+    margin-top: 3%;
     text-transform: uppercase;
-    letter-spacing: .15rem;
 }
 
-#info-textbox span {
-    font-size: 24px;
-}
-
-#info-container img {
+#tonio {
     margin-left: auto;
     margin-right: 15%;
+    pointer-events: none;
     width: 40vw;
 }
